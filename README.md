@@ -3,9 +3,9 @@ Streamlining Small Business Private Dining Data Collection for Use In Analytics 
 Table of Contents
 
 * [Background](#Background)
-* [Data Questions](#Data Questions)
-* [Tools and Sources](#Tools and Sources)
-* [Work Flow](#Work Flow)
+* [Data Questions](#Data-Questions)
+* [Tools and Sources](#Tools-and-Sources)
+* [Work Flow](#Flow)
 
 
 Background
