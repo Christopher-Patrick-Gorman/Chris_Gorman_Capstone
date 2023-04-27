@@ -19,11 +19,11 @@ When do clients inquire about booking an event for a certain month?  Out of thos
 Tools and Sources
 
 Tools
-* Python
-o requests
-o pandas
+- Python
+*- requests
+** pandas
 * Ubuntu
-o Via Linode
+** Via Linode
 * Tableau
 
 Sources
