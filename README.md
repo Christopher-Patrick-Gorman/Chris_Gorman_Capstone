@@ -24,15 +24,23 @@ Tools
   - pandas
 * Ubuntu
   - Via Linode
+* SnowFlake
 * Tableau
 
 ## Sources
+
 * TripleSeat API
 * OpenTable API
 
 ## Flow
-1. Acquire access to APIs and call relevant data through Python Script
-2. Use Ubuntu to automate running of Python Script
-3. Pull data into Tableau and build visualizations
+
+1. Python script was created to call APIs, clean data, and push to cloud database in SnowFlake
+2. Ubuntu used to create cronjob that will run the Python script at 09:00 CST daily
+3. Tableau was then connected to the SnowFlake cloud database and scheduled to refresh at 10:00
+4. Visualizations in Tableau were built to populate based on current date providing fresh, up-to-date metrics
+
+## Next Steps
+
+The next step in this project is to integrate a cloud based POS newly implemented by this small restaurant chain to visualize organic sales data and compare it with private dining sales data.
 
 
