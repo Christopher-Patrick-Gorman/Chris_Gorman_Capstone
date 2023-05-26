@@ -36,8 +36,8 @@ Tools
 
 1. Python script was created to call APIs, clean data, and push to cloud database in SnowFlake
 2. Ubuntu used to create cronjob that will run the Python script at 09:00 CST daily
-3. Tableau was then connected to the SnowFlake cloud database and scheduled to refresh at 10:00
-4. Visualizations in Tableau were built to populate based on current date providing fresh, up-to-date metrics
+3. A live connection was then made from Tableau to SnowFlake cloud database to automatically update the dashboards
+4. The filters in the Tableau dashboards were built to populate based on current month/year providing fresh, up-to-date metrics on a daily basis
 
 ## Next Steps
 
