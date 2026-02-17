@@ -10,11 +10,11 @@ The pipeline supports reporting on:
 
 ### Project Status
 
-The original Snowflake implementation is no longer actively maintained and may not run due to changes in credentials and environment setup.
+This repository contains the original implementation of the TripleSeat data ingestion and transformation pipeline, which loaded data into Snowflake.
 
-The current iteration of the project focuses on the MySQL-based architecture and application layer, which supports incremental processing and operational use cases.
+The Snowflake environment is no longer active, so the project may not run as-is.
 
-This repository is maintained as a reference for the data ingestion and transformation logic.
+A later iteration of the project introduced a MySQL database and application layer (Flask + React), which is maintained separately.
 
 ---
 
