@@ -1,0 +1,29 @@
+# --- Secrets / Credentials ---
+TripleSeat_API/*.json
+.env
+.env.*
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+
+# --- Virtual Environments ---
+venv/
+.venv/
+env/
+
+# --- OS files ---
+.DS_Store
+Thumbs.db
+
+# --- Logs / temp ---
+*.log
+*.tmp
+
+# --- Local data outputs ---
+*.csv
+*.xlsx
+*.parquet
