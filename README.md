@@ -1,9 +1,9 @@
 # TripleSeat Event Data Pipeline
 
 ## Overview
-This project builds an automated data pipeline that extracts event and lead data from the TripleSeat API, transforms nested structures, and loads the data for analytics and application use.
+This project delivers a production-style ETL pipeline that converts complex TripleSeat event and lead data into a reliable analytics layer, enabling operational reporting and application integration.
 
-The pipeline supports reporting on:
+The pipeline supports reporting on:  
 • Event performance trends  
 • Booking activity  
 • Lead tracking and operational insights  
@@ -11,8 +11,19 @@ The pipeline supports reporting on:
 ### Project Status
 This repository represents the ingestion and transformation layer.
 
-The current production architecture uses a MySQL operational store
+The current production architecture uses a MySQL operational store  
 with a Flask API and React frontend maintained in a private repository.
+
+---
+
+## Key Features
+
+• Automated API ingestion with pagination handling  
+• Normalization of nested JSON into a relational schema  
+• Incremental processing with idempotent upserts  
+• Dual-target architecture (Snowflake warehouse + MySQL operational store)  
+• Production scheduling via cron on a Linux VM  
+• Separation of ingestion pipeline and application layer  
 
 ---
 
@@ -51,15 +62,24 @@ The application layer is maintained in a separate private repository, while this
 
 ---
 
+## Architectural Decisions
+
+• **Snowflake** was chosen initially for analytical flexibility and rapid schema iteration  
+• **MySQL** was introduced to support low-latency application queries and incremental processing  
+• **Cron scheduling** provided lightweight orchestration appropriate to pipeline complexity  
+• **Separate repositories** were used to decouple ingestion logic from application code and improve maintainability  
+
+---
+
 ## Deployment Context
 
 The pipeline was deployed on a Linux-based Linode virtual machine.
 
-API ingestion tasks were scheduled using cron, allowing the pipeline
+API ingestion tasks were scheduled using cron, allowing the pipeline  
 to run automatically on a recurring basis.
 
-The Snowflake implementation used batch loads, while a later MySQL-based
-architecture introduced incremental processing with upsert logic based
+The Snowflake implementation used batch loads, while a later MySQL-based  
+architecture introduced incremental processing with upsert logic based  
 on transaction GUIDs and last-modified timestamps.
 
 ---
@@ -113,7 +133,7 @@ TripleSeat API → Python ETL (cron on Linode) → MySQL → Flask API → React
 
 ## How to Run
 
-## Configuration / Secrets
+### Configuration / Secrets
 
 This project requires API and database credentials that are not included in the repository.
 
@@ -128,6 +148,8 @@ Example files (not committed):
 
 > Note: These files are excluded via `.gitignore` to prevent committing secrets.
 
+### Steps
+
 1. Configure environment variables  
 2. Execute ETL scripts  
 3. Data loads into Snowflake or MySQL depending on configuration  
@@ -136,11 +158,11 @@ Example files (not committed):
 
 ## Key Learnings
 
-• Handling nested JSON structures  
-• Pagination strategies for API ingestion  
-• Warehouse schema design  
-• Designing incremental data pipelines  
-• Building application layers on top of analytical datasets  
+• Designing idempotent ETL processes for API-based data sources  
+• Modeling semi-structured JSON into analytics-friendly schemas  
+• Tradeoffs between warehouse-first vs operational-store architectures  
+• Implementing incremental ingestion using change tracking fields  
+• Operationalizing pipelines with scheduling and environment isolation  
 
 ---
 
