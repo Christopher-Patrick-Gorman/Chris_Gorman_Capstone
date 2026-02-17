@@ -53,10 +53,14 @@ The application layer is maintained in a separate private repository, while this
 
 ## Deployment Context
 
-The pipeline was deployed on a Linux VM (Linode).
-Cron jobs scheduled API ingestion tasks.
-The MySQL version supports upserts using transaction GUID
-and last-modified timestamps.
+The pipeline was deployed on a Linux-based Linode virtual machine.
+
+API ingestion tasks were scheduled using cron, allowing the pipeline
+to run automatically on a recurring basis.
+
+The Snowflake implementation used batch loads, while a later MySQL-based
+architecture introduced incremental processing with upsert logic based
+on transaction GUIDs and last-modified timestamps.
 
 ---
 
