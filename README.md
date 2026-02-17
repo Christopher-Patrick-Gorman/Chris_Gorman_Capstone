@@ -8,6 +8,14 @@ The pipeline supports reporting on:
 • Booking activity  
 • Lead tracking and operational insights  
 
+### Project Status
+
+The original Snowflake implementation is no longer actively maintained and may not run due to changes in credentials and environment setup.
+
+The current iteration of the project focuses on the MySQL-based architecture and application layer, which supports incremental processing and operational use cases.
+
+This repository is maintained as a reference for the data ingestion and transformation logic.
+
 ---
 
 ## Business Problem
