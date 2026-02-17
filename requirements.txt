@@ -1,0 +1,5 @@
+pandas
+requests
+requests-oauthlib
+snowflake-connector-python
+python-dotenv
