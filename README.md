@@ -9,12 +9,10 @@ The pipeline supports reporting on:
 • Lead tracking and operational insights  
 
 ### Project Status
+This repository represents the ingestion and transformation layer.
 
-This repository contains the original implementation of the TripleSeat data ingestion and transformation pipeline, which loaded data into Snowflake.
-
-The Snowflake environment is no longer active, so the project may not run as-is.
-
-A later iteration of the project introduced a MySQL database and application layer (Flask + React), which is maintained separately.
+The current production architecture uses a MySQL operational store
+with a Flask API and React frontend maintained in a private repository.
 
 ---
 
