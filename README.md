@@ -20,6 +20,18 @@ I designed a Python-based ETL pipeline that:
 4. Loads structured data into Snowflake
 5. Feeds downstream dashboards
 
+## Architecture Evolution
+
+The project originally loaded transformed data into Snowflake as a warehouse for analytics.
+
+As the scope expanded, I introduced an application layer to enable direct interaction with the dataset. This included:
+
+• MySQL as the operational analytics database  
+• Flask backend exposing REST endpoints  
+• React frontend for data exploration  
+
+The application layer is maintained in a separate private repository, while this repository focuses on the data ingestion and transformation pipeline.
+
 ## Tech Stack
 Python • Pandas • REST APIs • OAuth • Snowflake • Cron Scheduling
 
