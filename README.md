@@ -51,6 +51,15 @@ The application layer is maintained in a separate private repository, while this
 
 ---
 
+## Deployment Context
+
+The pipeline was deployed on a Linux VM (Linode).
+Cron jobs scheduled API ingestion tasks.
+The MySQL version supports upserts using transaction GUID
+and last-modified timestamps.
+
+---
+
 ## Deployment & Orchestration
 
 The pipeline is deployed on a **Linode virtual machine**, where scheduled jobs run via **cron** to automate data ingestion.
