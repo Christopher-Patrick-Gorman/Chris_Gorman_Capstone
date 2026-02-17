@@ -94,6 +94,21 @@ TripleSeat API → Python ETL (cron on Linode) → MySQL → Flask API → React
 
 ## How to Run
 
+## Configuration / Secrets
+
+This project requires API and database credentials that are not included in the repository.
+
+Credentials are stored locally in JSON files (ignored by git) and loaded at runtime.  
+Example files (not committed):
+
+- `TripleSeat_API/API_Key.json`
+- `TripleSeat_API/API_Secret.json`
+- `TripleSeat_API/SnowFlakeUser.json`
+- `TripleSeat_API/SnowFlakePass.json`
+- `TripleSeat_API/SnowFlakeAccount.json`
+
+> Note: These files are excluded via `.gitignore` to prevent committing secrets.
+
 1. Configure environment variables  
 2. Execute ETL scripts  
 3. Data loads into Snowflake or MySQL depending on configuration  
